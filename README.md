@@ -1,47 +1,68 @@
-# TypeScript Next.js example
+# ChickenBot
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+ChickenBot is a Next.js project that implements a game where you chase a chicken. The twist? The Chicken is part robot! It utilizes machine learning to improve its evasive behavior based on your chasing patterns. This project is built on the Nextjs react web framework and utilizes TypeScript and the Tailwind CSS framework.
 
-## Deploy your own
+## Getting Started
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+To get started with ChickenBot, follow these steps:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd ChickenBot`
+3. Install the dependencies:
 
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
+Using npm:
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
+npm install
 ```
 
+Using yarn:
 ```bash
-yarn create next-app --example with-typescript with-typescript-app
+yarn install
 ```
 
+## Development
+
+To start the development server, run the following command:
+
+Using npm:
 ```bash
-pnpm create next-app --example with-typescript with-typescript-app
+npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
+Using yarn:
+```bash
+yarn dev
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+This will start the Next.js development server and you can view the project by visiting [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Build
+
+To build the project for production, use the following commands:
+
+Using npm:
+```bash
+npm run build
 ```
-npm install --save-dev @types/react @types/react-dom @types/node
+
+Using yarn:
+```bash
+yarn build
 ```
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+This will create an optimized production-ready build of the ChickenBot project.
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+## Deployment
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+ChickenBot can be deployed to various hosting platforms, including Vercel, Netlify, or your own server. Refer to the documentation of your preferred hosting platform for deployment instructions.
+
+## Technologies Used
+
+- TypeScript
+- [Next.js](https://nextjs.org/) - React framework for server-side rendering and static site generation.
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework that uses class name styling for rapid UI development.
+- Machine Learning (ML) - Used to improve the chicken's evasive behavior based on the player's chasing patterns.
+
+## Contributing
+
+Contributions to ChickenBot are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request to the project repository.
