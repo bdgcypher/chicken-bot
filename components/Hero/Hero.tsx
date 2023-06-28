@@ -3,8 +3,8 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Game", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Game", href: "/game" },
   { name: "About", href: "#" },
 ];
 
@@ -115,7 +115,7 @@ export default function Hero() {
             <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
               <p className="text-lg leading-8 text-gray-600">
                 Have you ever chased a pixelated chicken before, but found it
-                was just too easy? Well not any more! Our Chickens are part
+                was just too easy? Well not anymore! Our Chickens are part
                 Robot and learn your chasing patterns with time in order to
                 ensure that you have to stretch yourself to the limits each time
                 you play in order to Bag the Bird!
@@ -135,14 +135,16 @@ export default function Hero() {
                 </a>
               </div>
             </div>
-            <h1 className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover text-8xl sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
-              🐔...🤖
-            </h1>
             {/* <img
+              src="/chicken_head.png"
+              alt="Pixelated chicken head image"
+              className="mt-10 aspect-[6/5] w-full max-w-md rounded-2xl object-cover text-8xl sm:mt-16 lg:mt-0 lg:max-w-lg xl:row-span-2 xl:row-end-2 xl:mt-36"
+            /> */}
+            <img
               src="/chicken_head.jpg"
               alt="Pixelated chicken head image"
-              className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover text-8xl sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
-            /> */}
+              className="mt-10 aspect-[6/5] w-full max-w-md rounded-2xl border-8 border-gray-900 shadow-2xl object-cover text-8xl sm:mt-16 lg:mt-0 lg:max-w-lg xl:row-span-2 xl:row-end-2 xl:mt-36"
+            />
           </div>
         </div>
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />

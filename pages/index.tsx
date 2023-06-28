@@ -1,8 +1,10 @@
-import Link from 'next/link'
-import Hero from '../components/Hero/Hero'
+import Hero from "../components/Hero/Hero";
+import MoveImage from "../components/Game/MoveImage";
 
 const IndexPage = () => (
+  <>
     <Hero />
-)
+  </>
+);
 
-export default IndexPage
+export default IndexPage;
