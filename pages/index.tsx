@@ -1,8 +1,9 @@
 import Hero from "../components/Hero/Hero";
-import MoveImage from "../components/Game/MoveImage";
+import Navbar from "../components/Navbar";
 
 const IndexPage = () => (
   <>
+    <Navbar />
     <Hero />
   </>
 );
