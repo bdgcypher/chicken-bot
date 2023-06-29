@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Farmer({source, position}) {
+export default function Chicken({source, position}) {
     return (
         <img
         src={source}
         alt="Moving Image"
-        className="h-24 w-20"
+        className="h-32 w-32"
         style={{
           objectFit: "cover",
           position: "absolute",
