@@ -49,7 +49,7 @@ const MoveImage = () => {
       }
       if (keysPressed.has('ArrowDown') && newPosition.y < containerHeight - 110) {
         newPosition.y += 10;
-        newSource.source = "farmer_front.gif";
+        newSource.source = "farmer_front1.gif";
       }
       if (keysPressed.has('ArrowLeft') && newPosition.x > 0) {
         newPosition.x -= 10;
@@ -75,10 +75,16 @@ const MoveImage = () => {
       className="relative h-full w-full bg-green-600 overflow-hidden"
     >
       <img
+        src="background.gif"
+        alt="green grass background"
+        className="h-full w-full"
+      />
+      <img
         src={source}
         alt="Moving Image"
         className="h-24 w-20"
         style={{
+          objectFit: "cover",
           position: "absolute",
           top: `${position.y}px`,
           left: `${position.x}px`,
