@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-const MoveImage = () => {
+const Farmer = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [keysPressed, setKeysPressed] = useState<Set<string>>(new Set());
   const containerRef = useRef<HTMLDivElement>(null);
@@ -94,4 +94,4 @@ const MoveImage = () => {
   );
 };
 
-export default MoveImage;
+export default Farmer;
