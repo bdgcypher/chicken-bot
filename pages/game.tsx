@@ -1,4 +1,4 @@
-import Farmer from "../components/Game/MoveImage";
+import Farmer from "../components/Game/Farmer";
 import Navbar from "../components/Navbar";
 
 const IndexPage = () => (
