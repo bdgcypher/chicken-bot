@@ -27,7 +27,7 @@ export default function Hero() {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
-                  href="#"
+                  href="/game"
                   className="rounded-md bg-yellow-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                 >
                   Play Now
@@ -40,11 +40,6 @@ export default function Hero() {
                 </a>
               </div>
             </div>
-            {/* <img
-              src="/chicken_head.png"
-              alt="Pixelated chicken head image"
-              className="mt-10 aspect-[6/5] w-full max-w-md rounded-2xl object-cover text-8xl sm:mt-16 lg:mt-0 lg:max-w-lg xl:row-span-2 xl:row-end-2 xl:mt-36"
-            /> */}
             <img
               src="/chicken_head.jpg"
               alt="Pixelated chicken head image"

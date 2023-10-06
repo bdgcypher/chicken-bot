@@ -90,25 +90,26 @@ const Game = () => {
 
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
+    const farmerSpeed = 7;
 
     const moveInterval = setInterval(() => {
       const newPosition = { ...farmerPos };
       const newImage = { source: "farmer_front.png"};
 
       if (keysPressed.has('ArrowUp') && newPosition.y > 0) {
-        newPosition.y -= 10;
+        newPosition.y -= farmerSpeed;
         newImage.source = "farmer_back1.gif";
       }
       if (keysPressed.has('ArrowDown') && newPosition.y < containerHeight - 110) {
-        newPosition.y += 10;
+        newPosition.y += farmerSpeed;
         newImage.source = "farmer_front1.gif";
       }
       if (keysPressed.has('ArrowLeft') && newPosition.x > 0) {
-        newPosition.x -= 10;
+        newPosition.x -= farmerSpeed;
         newImage.source = "farmer_left1.gif";
       }
       if (keysPressed.has('ArrowRight') && newPosition.x < containerWidth - 90) {
-        newPosition.x += 10;
+        newPosition.x += farmerSpeed;
         newImage.source = "farmer_right1.gif";
       }
 
