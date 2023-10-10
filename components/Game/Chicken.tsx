@@ -4,7 +4,7 @@ export default function Chicken({source, position}) {
     return (
         <img
         src={source}
-        alt="Moving Image"
+        alt="Moving picture of Chicken"
         className="h-32 w-32"
         style={{
           objectFit: "cover",
