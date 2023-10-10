@@ -41,7 +41,10 @@ const Game = () => {
       // Reverse direction if the chicken hits the container boundaries
       if (newX + chickenWidth > containerWidth || newX < 0) {
         xDirection = -xDirection;
-        setChickenImage(!chickenImage);
+        setChickenImage(false);
+        if (chickenX === 0) {
+          setChickenImage(true);
+        }
       }
       if (newY + chickenHeight > containerHeight || newY < 0) {
         yDirection = -yDirection;
