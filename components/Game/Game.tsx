@@ -25,6 +25,8 @@ const Game = () => {
     let yDirection = 1; // Vertical direction: 1 for down, -1 for up
 
     const moveChicken = () => {
+
+      // Get container boundaries
       const containerWidth = container.offsetWidth;
       const containerHeight = container.offsetHeight;
       const chickenWidth = chicken.offsetWidth;
@@ -83,11 +85,12 @@ const Game = () => {
     };
   }, []);
 
-  // Farmer movement
+  // Farmer movement - update the farmer position and change the image source to match the direction he is moving
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
+    // Get the container borders and set the farmers speed
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
     const farmerSpeed = 7;
@@ -96,18 +99,25 @@ const Game = () => {
       const newPosition = { ...farmerPos };
       const newImage = { source: "farmer_front.png"};
 
+      // Move Farmer up
       if (keysPressed.has('ArrowUp') && newPosition.y > 0) {
         newPosition.y -= farmerSpeed;
         newImage.source = "farmer_back1.gif";
       }
+
+      // Move Farmer down
       if (keysPressed.has('ArrowDown') && newPosition.y < containerHeight - 110) {
         newPosition.y += farmerSpeed;
         newImage.source = "farmer_front1.gif";
       }
+
+      // Move Farmer left
       if (keysPressed.has('ArrowLeft') && newPosition.x > 0) {
         newPosition.x -= farmerSpeed;
         newImage.source = "farmer_left1.gif";
       }
+
+      // Move Farmer right
       if (keysPressed.has('ArrowRight') && newPosition.x < containerWidth - 90) {
         newPosition.x += farmerSpeed;
         newImage.source = "farmer_right1.gif";
