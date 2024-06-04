@@ -96,32 +96,60 @@ const Game = () => {
     // Get the container borders and set the farmers speed
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
-    const farmerSpeed = 7;
+    const farmerSpeed = 6;
 
     const moveInterval = setInterval(() => {
       const newPosition = { ...farmerPos };
       const newImage = { source: "farmer_front.png"};
 
       // Move Farmer up
-      if (keysPressed.has('ArrowUp') && newPosition.y > 0) {
+      if (keysPressed.has('ArrowUp') && !keysPressed.has('ArrowLeft') && !keysPressed.has('ArrowRight') && newPosition.y > 0) {
         newPosition.y -= farmerSpeed;
         newImage.source = "farmer_back1.gif";
       }
 
+      // Move Farmer up and left
+      if (keysPressed.has('ArrowUp') && keysPressed.has('ArrowLeft') && newPosition.y > 0) {
+        newPosition.x -= (farmerSpeed / 1.5);
+        newPosition.y -= (farmerSpeed / 1.5);
+        newImage.source = "farmer_left1.gif";
+      }
+
+      // Move Farmer up and right
+      if (keysPressed.has('ArrowUp') && keysPressed.has('ArrowRight') && newPosition.y > 0) {
+        newPosition.x += (farmerSpeed / 1.5);
+        newPosition.y -= (farmerSpeed / 1.5);
+        newImage.source = "farmer_right1.gif";
+      }
+
       // Move Farmer down
-      if (keysPressed.has('ArrowDown') && newPosition.y < containerHeight - 110) {
+      if (keysPressed.has('ArrowDown') && !keysPressed.has('ArrowLeft') && !keysPressed.has('ArrowRight') && newPosition.y < containerHeight - 110) {
         newPosition.y += farmerSpeed;
         newImage.source = "farmer_front1.gif";
       }
 
+      // Move Farmer down and left
+      if (keysPressed.has('ArrowDown') && keysPressed.has('ArrowLeft') && newPosition.y > 0) {
+        newPosition.x -= (farmerSpeed / 1.5);
+        newPosition.y += (farmerSpeed / 1.5);
+        newImage.source = "farmer_left1.gif";
+      }
+
+      // Move Farmer down and right
+      if (keysPressed.has('ArrowDown') && keysPressed.has('ArrowRight') && newPosition.y > 0) {
+        newPosition.x += (farmerSpeed / 1.5);
+        newPosition.y += (farmerSpeed / 1.5);
+        newImage.source = "farmer_right1.gif";
+      }
+
       // Move Farmer left
-      if (keysPressed.has('ArrowLeft') && newPosition.x > 0) {
+      if (keysPressed.has('ArrowLeft') && !keysPressed.has('ArrowUp') && !keysPressed.has('ArrowDown') && newPosition.x > 0) {
         newPosition.x -= farmerSpeed;
         newImage.source = "farmer_left1.gif";
       }
 
       // Move Farmer right
-      if (keysPressed.has('ArrowRight') && newPosition.x < containerWidth - 90) {
+      if (keysPressed.has('ArrowRight') && !keysPressed.has('ArrowUp') && !keysPressed.has('ArrowDown') && newPosition.x < containerWidth - 90) {
         newPosition.x += farmerSpeed;
         newImage.source = "farmer_right1.gif";
       }
@@ -134,6 +162,7 @@ const Game = () => {
       clearInterval(moveInterval);
     };
   }, [farmerPos, keysPressed]);
+
 
   return (
     <div
