@@ -1,6 +1,6 @@
 # ChickenBot (Work In Progress)
 
-ChickenBot is a Next.js project that implements a game where you chase a chicken. The twist? The Chicken is going to be part robot! This project idea was a collaboration between me (frontend dev) and my brother-in-law (ML engineer) as a way to create a unique and goofy project that utilized both of our skillsets. It will utilize a machine learning model to improve its evasive behavior based on your chasing patterns. This project is still a work in progress and is being built on the Nextjs react web framework and utilizes TypeScript and the Tailwind CSS styling library.
+ChickenBot is a Next.js project that implements a game where you chase a chicken. The twist? The Chicken is going to be part robot! This project idea was a collaboration between me (frontend dev) and my brother-in-law (ML engineer) as a way to create a unique and goofy project that utilized both of our skillsets. It will utilize a machine learning model to improve its evasive behavior based on your chasing patterns. This project is still a work in progress and is being built on the Nextjs react web framework and utilizes TypeScript and the Tailwind CSS styling library. Some fun quirks and new skills I had to learn in this project include creating the character gifs, sprite movement effects, and creating player and sprite movement functions.
 
 ## Getting Started
 
