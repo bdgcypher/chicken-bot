@@ -21,7 +21,7 @@ export default function Hero() {
               <p className="text-lg leading-8 text-gray-600">
                 Have you ever chased a pixelated chicken before, but found it
                 was just too easy? Well not anymore! Our Chickens are part
-                Robot and learn your chasing patterns with time in order to
+                robot and learn your chasing patterns with time in order to
                 ensure that you have to stretch yourself to the limits each time
                 you play in order to Bag the Bird!
               </p>
